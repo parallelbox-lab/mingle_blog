@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "32777752177",
+    "project_id": "mingle-blog",
+    "storage_bucket": "mingle-blog.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32777752177:android:40c68cb1ae3a836b7cd5d0",
+        "android_client_info": {
+          "package_name": "com.example.mingle_blog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32777752177-bqj3m87d2cue38s6nqhj3ph0fvqskcbk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMbIcMsX1NX4kQ7spsxK3jCgyvRknEy-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32777752177-bqj3m87d2cue38s6nqhj3ph0fvqskcbk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
