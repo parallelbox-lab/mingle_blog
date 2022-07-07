@@ -118,7 +118,7 @@ class Home extends StatelessWidget {
         itemCount: 6,
         itemBuilder: (BuildContext context, i) {
           return Padding(
-           padding: const EdgeInsets.only(bottom: 15.0),
+           padding: const EdgeInsets.only(bottom: 16.0),
             child: Container(
               height: 70.0,              
               child: Row(
@@ -132,8 +132,8 @@ class Home extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(width: 15.0),
-                  Container(
+               const SizedBox(width: 15.0),
+                  SizedBox(
                     height: 80.0,
                     width: MediaQuery.of(context).size.width - 130.0,
                     child: ListView(
@@ -144,7 +144,7 @@ class Home extends StatelessWidget {
                         Container(
                           alignment: Alignment.centerLeft,
                           child: const Text(
-                            "place]",
+                            "Men of hope",
                             style: TextStyle(
                               fontWeight: FontWeight.w700,
                               fontSize: 14.0,
@@ -153,15 +153,15 @@ class Home extends StatelessWidget {
                             textAlign: TextAlign.left,
                           ),
                         ),
-                        SizedBox(height: 3.0),
+                       const SizedBox(height: 3.0),
                         Row(
                           children: <Widget>[
                             Icon(
-                              Icons.location_on,
+                              Icons.new_label,
                               size: 13.0,
                               color: Colors.blueGrey[300],
                             ),
-                            SizedBox(width: 3.0),
+                            const SizedBox(width: 3.0),
                             Container(
                               alignment: Alignment.centerLeft,
                               child: Text(
