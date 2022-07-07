@@ -50,7 +50,8 @@ class Home extends StatelessWidget {
                const  SizedBox(height: 30,),
                 horizontalList(context),
                 const  SizedBox(height: 10,),
-                TitleHolder(titleName: "Latest News",onPressed: (){},)
+                TitleHolder(titleName: "Latest News",onPressed: (){},),
+                const SizedBox(height: 20,),
               ],
             ),
           ),
