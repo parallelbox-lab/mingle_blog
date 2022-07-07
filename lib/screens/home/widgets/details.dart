@@ -36,6 +36,7 @@ class Details extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child:  Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
             children: [
           Padding(
           padding: const EdgeInsets.all(25.0),
