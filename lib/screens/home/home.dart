@@ -86,8 +86,8 @@ class Home extends StatelessWidget {
           itemCount: 5,
           itemBuilder: (BuildContext context, i) {
             return Padding(
-              padding: const EdgeInsets.only(right: 15.0),
-              child: Container(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: SizedBox(
                   height: 250,
                   width: 140.0,
                   child: Column(
