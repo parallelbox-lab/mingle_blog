@@ -20,7 +20,7 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text ?? '',
-        style: GoogleFonts.audiowide(
+        style: GoogleFonts.muli(
             textStyle: TextStyle(
                 letterSpacing: letterspacing,
                 fontSize: size ?? 14.sp,
