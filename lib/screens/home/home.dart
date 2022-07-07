@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mingle_blog/widgets/custom_text.dart';
-
+import 'package:sizer/sizer.dart';
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -16,15 +16,15 @@ class Home extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Column(crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children:  [
                         CustomText(
                             text: "Welcome, Owoeye",
-                            size: 20,
+                            size: 20.sp,
                             color: Colors.black),
-                        SizedBox(height: 10,),
+                      const  SizedBox(height: 10,),
                         CustomText(
                           text: "Explore Today's",
-                          size: 25,
+                          size: 25.sp,
                           color: Colors.black,
                           weight: FontWeight.bold,
                         )
@@ -82,8 +82,8 @@ class Home extends StatelessWidget {
                 )),
                const SizedBox(height: 9.0,),
                Container(alignment: Alignment.centerLeft,
-               child:const CustomText(text: "How to lead a Godly marriage as a man",
-               size:15.0,weight:FontWeight.bold)
+               child: CustomText(text: "How to lead a Godly marriage as a man",
+               size:12.0.sp,weight:FontWeight.bold)
                )
             ],)
           ),
