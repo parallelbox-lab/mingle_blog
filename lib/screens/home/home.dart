@@ -9,17 +9,19 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body:  Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.symmetric(vertical:35.0,horizontal: 25),
             child: ListView(
               children: [
-                Row(
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Column(
+                    Column(crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         CustomText(
                             text: "Welcome, Owoeye",
                             size: 20,
                             color: Colors.black),
+                        SizedBox(height: 10,),
                         CustomText(
                           text: "Explore Today's",
                           size: 25,
@@ -57,15 +59,18 @@ class Home extends StatelessWidget {
       height: 250,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
+        scrollDirection: Axis.horizontal,
         itemCount:5,
         itemBuilder: (BuildContext context, i) {
         return Container(
           height:250,
           width:140.0,
-          child:Column(children: [
+          child:Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
             ClipRect(
               child: Image.asset(
-                "",
+                "assets/images/search.png",
                 height:178.0,
                 width:140.0,
                 fit:BoxFit.cover

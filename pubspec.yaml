@@ -38,6 +38,14 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  provider: ^5.0.0  
+  shared_preferences: ^2.0.13
+  sizer: ^2.0.15
+  flutter_svg: ^1.0.3
+  google_fonts: ^2.3.2
+  cloud_firestore: ^3.1.14
+  firebase_auth: ^3.3.17
+  firebase_core: ^1.16.0  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
