@@ -23,7 +23,7 @@ class Details extends StatelessWidget {
               ),
               child: IconButton(
                 icon:const Icon(Icons.chevron_left,color: Colors.black,size: 40,),
-                onPressed: (){},
+                onPressed: ()=> Navigator.pop(context),
               ),
             ),
             actions: [
