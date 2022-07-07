@@ -12,9 +12,10 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: ListView(
             children: [
+            const  SizedBox(height: 35,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
