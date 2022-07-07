@@ -114,12 +114,13 @@ class Home extends StatelessWidget {
   latestNews(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
+      scrollDirection: Axis.vertical,
       physics:const NeverScrollableScrollPhysics(),
         itemCount: 6,
         itemBuilder: (BuildContext context, i) {
           return Padding(
            padding: const EdgeInsets.only(bottom: 16.0),
-            child: Container(
+            child: SizedBox(
               height: 70.0,              
               child: Row(
                 children: [
@@ -181,10 +182,10 @@ class Home extends StatelessWidget {
                         Container(
                           alignment: Alignment.centerLeft,
                           child: const Text(
-                            "Hi",
+                            "By Bro Ayoade",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 16.0,
+                              fontSize: 14.0,
                             ),
                             maxLines: 1,
                             textAlign: TextAlign.left,
