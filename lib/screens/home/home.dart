@@ -165,7 +165,7 @@ class Home extends StatelessWidget {
                             Container(
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                "{place[" "]}",
+                                "Marraige Counselling",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 13.0,
@@ -181,7 +181,7 @@ class Home extends StatelessWidget {
                         Container(
                           alignment: Alignment.centerLeft,
                           child: const Text(
-                            "{place[" "]}",
+                            "Hi",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 16.0,
