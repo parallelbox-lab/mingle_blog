@@ -57,8 +57,8 @@ class Home extends StatelessWidget {
 
   horizontalList(BuildContext context) {
     return Container(
-     padding: EdgeInsets.only(top: 10.0),
-      height: 250,
+     padding:const EdgeInsets.only(top: 10.0),
+      height: 300,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -76,8 +76,8 @@ class Home extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12.0),
                 child: Image.asset(
                   "assets/images/sit.jpg",
-                  height:178.0,
-                  width:150.0,
+                  height:180.0,
+                  width:160.0,
                   fit:BoxFit.cover
                 )),
                const SizedBox(height: 9.0,),
