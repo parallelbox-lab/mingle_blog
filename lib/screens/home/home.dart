@@ -72,17 +72,17 @@ class Home extends StatelessWidget {
             child:Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-              ClipRect(
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12.0),
                 child: Image.asset(
                   "assets/images/sit.jpg",
                   height:178.0,
-                  width:140.0,
+                  width:150.0,
                   fit:BoxFit.cover
                 )),
-               const SizedBox(height: 7.0,),
+               const SizedBox(height: 9.0,),
                Container(alignment: Alignment.centerLeft,
                child:const CustomText(text: "How to lead a Godly marriage as a man",
-               maxLines: 2,
                size:15.0,weight:FontWeight.bold)
                )
             ],)
