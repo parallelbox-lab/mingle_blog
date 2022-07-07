@@ -10,7 +10,7 @@ class Details extends StatelessWidget {
     return Scaffold(
       backgroundColor:  Colors.white,
       appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(90.0),
+          preferredSize: const Size.fromHeight(70.0),
           child: Container(
             margin:const EdgeInsets.only(top:15),
             child: AppBar(
