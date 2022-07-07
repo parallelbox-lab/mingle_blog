@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 35.0, horizontal: 25),
+          padding: const EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
           child: ListView(
             children: [
               Row(
@@ -126,15 +126,15 @@ class Home extends StatelessWidget {
                 children: [
                    Expanded(
                      child: ClipRRect(
-                                     borderRadius: BorderRadius.circular(5),
-                                     child: Image.asset(
-                      "assets/images/sit.jpg",
-                      height: 70.0,
-                      width: 70.0,
-                      fit: BoxFit.cover,
-                                     ),
-                                   ),
-                   ),
+                        borderRadius: BorderRadius.circular(5),
+                        child: Image.asset(
+                        "assets/images/sit.jpg",
+                        height: 100.0,
+                        width: 90.0,
+                        fit: BoxFit.cover,
+                              ),
+                            ),
+                   ),                
                const SizedBox(width: 15.0),
                   SizedBox(
                     height: 80.0,
@@ -195,7 +195,7 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
