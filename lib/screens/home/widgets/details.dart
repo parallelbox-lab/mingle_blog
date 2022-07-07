@@ -59,7 +59,10 @@ class Details extends StatelessWidget {
                         
                   ),
                   ), 
-         CustomText(text: "Posttitle Here",size: 15.sp,weight:FontWeight.w700, color:Colors.black)
+         Padding(
+           padding: const EdgeInsets.all(20.0),
+           child: CustomText(text: "Posttitle Here",size: 15.sp,weight:FontWeight.w700, color:Colors.black),
+         )
     
             ],
           ),
