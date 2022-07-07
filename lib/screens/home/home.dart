@@ -74,7 +74,7 @@ class Home extends StatelessWidget {
               children: [
               ClipRect(
                 child: Image.asset(
-                  "assets/images/search.png",
+                  "assets/images/sit.jpg",
                   height:178.0,
                   width:140.0,
                   fit:BoxFit.cover
