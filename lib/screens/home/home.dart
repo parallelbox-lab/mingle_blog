@@ -124,15 +124,17 @@ class Home extends StatelessWidget {
               height: 70.0,              
               child: Row(
                 children: [
-                   ClipRRect(
-                  borderRadius: BorderRadius.circular(5),
-                  child: Image.asset(
-                    "assets/images/sit.jpg",
-                    height: 70.0,
-                    width: 70.0,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                   Expanded(
+                     child: ClipRRect(
+                                     borderRadius: BorderRadius.circular(5),
+                                     child: Image.asset(
+                      "assets/images/sit.jpg",
+                      height: 70.0,
+                      width: 70.0,
+                      fit: BoxFit.cover,
+                                     ),
+                                   ),
+                   ),
                const SizedBox(width: 15.0),
                   SizedBox(
                     height: 80.0,
