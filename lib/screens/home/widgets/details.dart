@@ -35,14 +35,34 @@ class Details extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(25.0),
-          child: Column(
+        child:  Column(
             children: [
-CustomText(text: "Here’s What 15 Relationship Experts Can Teach Us About Love",size: 17.sp,)            ],
+          Padding(
+          padding: const EdgeInsets.all(25.0),
+          child: CustomText(text: "Here’s What 15 Relationship Experts Can Teach Us About Love",size: 17.sp,),
+           ),
+           const SizedBox(height: 10,),            
+            Container(
+                  height: 184.0,
+                  width: double.infinity,
+                  decoration:const BoxDecoration(
+                    borderRadius:  BorderRadius.only(
+                      topLeft: Radius.circular(20.0),
+                      topRight: Radius.circular(20.0),
+                    ),
+                    color: Colors.blue,
+                    image:  DecorationImage(
+                            image: AssetImage(
+                                'assets/images/Feature Image.png'),
+                            fit: BoxFit.cover)
+                        
+                  ),
+                  ), 
+
+
+            ],
           ),
         )
-      ),
     );
   }
 }
