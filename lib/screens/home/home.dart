@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mingle_blog/widgets/custom_text.dart';
+import 'package:mingle_blog/widgets/title_holder.dart';
 import 'package:sizer/sizer.dart';
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -46,8 +47,10 @@ class Home extends StatelessWidget {
                         ))
                   ],
                 ),
-              const  SizedBox(height: 30,),
+               const  SizedBox(height: 30,),
                 horizontalList(context),
+                const  SizedBox(height: 10,),
+                TitleHolder(titleName: "Latest News",onPressed: (){},)
               ],
             ),
           ),
