@@ -38,7 +38,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  provider: ^5.0.0  
   shared_preferences: ^2.0.13
   sizer: ^2.0.15
   flutter_svg: ^1.0.3

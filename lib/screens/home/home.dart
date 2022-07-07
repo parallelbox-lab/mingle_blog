@@ -46,6 +46,7 @@ class Home extends StatelessWidget {
                         ))
                   ],
                 ),
+              const  SizedBox(height: 30,),
                 horizontalList(context),
               ],
             ),
@@ -56,32 +57,36 @@ class Home extends StatelessWidget {
 
   horizontalList(BuildContext context) {
     return Container(
+     padding: EdgeInsets.only(top: 10.0),
       height: 250,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount:5,
         itemBuilder: (BuildContext context, i) {
-        return Container(
-          height:250,
-          width:140.0,
-          child:Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-            ClipRect(
-              child: Image.asset(
-                "assets/images/search.png",
-                height:178.0,
-                width:140.0,
-                fit:BoxFit.cover
-              )),
-             const SizedBox(height: 7.0,),
-             Container(alignment: Alignment.centerLeft,
-             child:const CustomText(text: "How to lead a Godly marriage as a man",
-             maxLines: 2,
-             size:15.0,weight:FontWeight.bold)
-             )
-          ],)
+        return Padding(
+          padding: const EdgeInsets.only(right:15.0),
+          child: Container(
+            height:250,
+            width:140.0,
+            child:Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              ClipRect(
+                child: Image.asset(
+                  "assets/images/search.png",
+                  height:178.0,
+                  width:140.0,
+                  fit:BoxFit.cover
+                )),
+               const SizedBox(height: 7.0,),
+               Container(alignment: Alignment.centerLeft,
+               child:const CustomText(text: "How to lead a Godly marriage as a man",
+               maxLines: 2,
+               size:15.0,weight:FontWeight.bold)
+               )
+            ],)
+          ),
         );
       }),
     );
