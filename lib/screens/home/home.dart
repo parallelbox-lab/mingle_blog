@@ -113,66 +113,88 @@ class Home extends StatelessWidget {
 
   latestNews(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
+      physics:const NeverScrollableScrollPhysics(),
         itemCount: 6,
         itemBuilder: (BuildContext context, i) {
-          return Container(
-            height: 80.0,
-            width: MediaQuery.of(context).size.width - 130.0,
-            child: ListView(
-              primary: false,
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              children: <Widget>[
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: const Text(
-                    "place]",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 14.0,
-                    ),
-                    maxLines: 2,
-                    textAlign: TextAlign.left,
+          return Padding(
+           padding: const EdgeInsets.only(bottom: 15.0),
+            child: Container(
+              height: 70.0,              
+              child: Row(
+                children: [
+                   ClipRRect(
+                  borderRadius: BorderRadius.circular(5),
+                  child: Image.asset(
+                    "assets/images/sit.jpg",
+                    height: 70.0,
+                    width: 70.0,
+                    fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(height: 3.0),
-                Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.location_on,
-                      size: 13.0,
-                      color: Colors.blueGrey[300],
-                    ),
-                    SizedBox(width: 3.0),
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        "{place[" "]}",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13.0,
-                          color: Colors.blueGrey[300],
+                SizedBox(width: 15.0),
+                  Container(
+                    height: 80.0,
+                    width: MediaQuery.of(context).size.width - 130.0,
+                    child: ListView(
+                      primary: false,
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      children: <Widget>[
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          child: const Text(
+                            "place]",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 14.0,
+                            ),
+                            maxLines: 2,
+                            textAlign: TextAlign.left,
+                          ),
                         ),
-                        maxLines: 1,
-                        textAlign: TextAlign.left,
-                      ),
+                        SizedBox(height: 3.0),
+                        Row(
+                          children: <Widget>[
+                            Icon(
+                              Icons.location_on,
+                              size: 13.0,
+                              color: Colors.blueGrey[300],
+                            ),
+                            SizedBox(width: 3.0),
+                            Container(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "{place[" "]}",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13.0,
+                                  color: Colors.blueGrey[300],
+                                ),
+                                maxLines: 1,
+                                textAlign: TextAlign.left,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10.0),
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          child: const Text(
+                            "{place[" "]}",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16.0,
+                            ),
+                            maxLines: 1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                const SizedBox(height: 10.0),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: const Text(
-                    "{place[" "]}",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16.0,
-                    ),
-                    maxLines: 1,
-                    textAlign: TextAlign.left,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           );
         });
