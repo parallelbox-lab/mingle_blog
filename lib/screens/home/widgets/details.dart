@@ -9,30 +9,36 @@ class Details extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:  Colors.white,
-      appBar: AppBar(
-        backgroundColor:  Colors.white,
-        elevation: 0,
-        leading: Container(
-          padding:const EdgeInsets.all(10),
-          decoration:const BoxDecoration(
-            color:Colors.white70,
-          ),
-          child: IconButton(
-            icon:const Icon(Icons.chevron_left,color: Colors.black,size: 40,),
-            onPressed: (){},
-          ),
-        ),
-        actions: [
-           IconButton(
-            icon: IconBadge(
-              icon: Icons.notifications_none,
-              color: Colors.black,
-              size: 40,
+      appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(90.0),
+          child: Container(
+            margin:const EdgeInsets.only(top:15),
+            child: AppBar(
+            backgroundColor:  Colors.white,
+            elevation: 0,
+            leading: Container(
+              padding:const EdgeInsets.all(10),
+              decoration:const BoxDecoration(
+                color:Colors.white70,
+              ),
+              child: IconButton(
+                icon:const Icon(Icons.chevron_left,color: Colors.black,size: 40,),
+                onPressed: (){},
+              ),
             ),
-            onPressed: () {},
+            actions: [
+               IconButton(
+                icon: IconBadge(
+                  icon: Icons.notifications_none,
+                  color: Colors.black,
+                  size: 40,
+                ),
+                onPressed: () {},
+              ),
+             const SizedBox(width:5)
+            ],
+        ),
           ),
-         const SizedBox(width:5)
-        ],
       ),
       body: SingleChildScrollView(
         child:  Column(
