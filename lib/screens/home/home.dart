@@ -8,10 +8,9 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: Padding(
+        body:  Padding(
             padding: const EdgeInsets.all(15.0),
-            child: Column(
+            child: ListView(
               children: [
                 Row(
                   children: [
@@ -40,7 +39,7 @@ class Home extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20.0),
                               image: const DecorationImage(
                                   image: AssetImage(
-                                'assets/user_image.png',
+                                'assets/images/user_image.png',
                               ))),
                         ))
                   ],
@@ -50,7 +49,6 @@ class Home extends StatelessWidget {
             ),
           ),
         ),
-      ),
     );
   }
 

@@ -26,7 +26,6 @@ class CustomText extends StatelessWidget {
                 fontSize: size ?? 14,
                 color: color ?? Colors.black,
                 fontWeight: weight ?? FontWeight.normal),
-                maxLines: maxLines ?? 0,
                 );
   }
 }

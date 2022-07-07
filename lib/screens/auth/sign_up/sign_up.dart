@@ -9,9 +9,11 @@ class SignUp extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(child:Padding(
-          padding: const EdgeInsets.symmetric(vertical:25, horizontal:15.0),
-          child: Column(children:const [
-           CustomText(text: "Mingle \n Create Account", size: 26,color:Colors.black),
+          padding: const EdgeInsets.symmetric(vertical:50, horizontal:25.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children:const [
+           CustomText(text: "Mingle \nCreate Account", size: 39,color:Colors.black,weight:FontWeight.bold),
             SizedBox(height: 15,),
            FormContent(),
           ],),

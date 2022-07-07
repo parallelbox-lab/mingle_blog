@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mingle_blog/screens/home/home.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   final List<Widget> _pages = <Widget>[
-
+  Home()
   ];
   final PageController _pageController = PageController();
   int _selectedIndex = 0;
@@ -74,21 +75,12 @@ class _HomeViewState extends State<HomeView> {
                         color: _selectedIndex == 1 ? Colors.black : Colors.grey,
                         width: 25,
                         height: 25)),
-                label: 'Notifications',
+                label: 'Articles',
               ),
               BottomNavigationBarItem(
                 icon: Container(
                     margin: const EdgeInsets.only(bottom: 10),
                     child: Image.asset('assets/images/Profile.png',
-                        color: _selectedIndex == 2 ? Colors.black : Colors.grey,
-                        width: 25,
-                        height: 25)),
-                label: 'Profile',
-              ),
-               BottomNavigationBarItem(
-                icon: Container(
-                    margin: const EdgeInsets.only(bottom: 10),
-                    child: Image.asset('assets/Profile.png',
                         color: _selectedIndex == 2 ? Colors.black : Colors.grey,
                         width: 25,
                         height: 25)),
