@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mingle_blog/widgets/custom_text.dart';
-import 'package:mingle_blog/widgets/icon_badge.dart';
 import 'package:sizer/sizer.dart';
 class Details extends StatelessWidget {
   const Details({ Key? key }) : super(key: key);
@@ -26,17 +25,7 @@ class Details extends StatelessWidget {
                 onPressed: ()=> Navigator.pop(context),
               ),
             ),
-            actions: [
-               IconButton(
-                icon: IconBadge(
-                  icon: Icons.notifications_none,
-                  color: Colors.black,
-                  size: 40,
-                ),
-                onPressed: () {},
-              ),
-             const SizedBox(width:5)
-            ],
+            
         ),
           ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mingle_blog/screens/home_view.dart';
+import 'package:mingle_blog/services/auth_services.dart';
 import 'package:mingle_blog/utils/constants.dart';
 
 class FormContent extends StatefulWidget {
@@ -25,7 +26,16 @@ class _FormContentState extends State<FormContent> {
       _isVisible = !_isVisible;
     });
   }
+final AuthService _authService = AuthService();
 
+  Future _submit() async {
+    try {
+      _authService.createWithEmailAndPwd(_emailController.text.trim(),_passwordController.text.trim(),_nameController.text.trim(),context);
+    }catch(e){
+     rethrow;
+    }
+    setState(()=> isLoading = false);
+  }
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -216,11 +226,8 @@ class _FormContentState extends State<FormContent> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 setState(() => isLoading = true);
-                // _submit();
-                Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(builder: (ctx) => const HomeView()),
-                    (route) => false);
+                _submit();
+               
               }
             },
       child: isLoading

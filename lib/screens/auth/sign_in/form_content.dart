@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mingle_blog/screens/home_view.dart';
+import 'package:mingle_blog/services/auth_services.dart';
 import 'package:mingle_blog/utils/constants.dart';
 
 class FormContent extends StatefulWidget {
@@ -23,7 +24,8 @@ class _FormContentState extends State<FormContent> {
       _isVisible = !_isVisible;
     });
   }
-
+final AuthService _authService = AuthService();
+  
   @override
   Widget build(BuildContext context) {
     return Form(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mingle_blog/screens/home/widgets/details.dart';
 import 'package:mingle_blog/widgets/custom_text.dart';
+import 'package:mingle_blog/widgets/icon_badge.dart';
 import 'package:mingle_blog/widgets/title_holder.dart';
+import 'package:mingle_blog/widgets/icon_badge.dart';
 import 'package:sizer/sizer.dart';
 
 class Home extends StatelessWidget {
@@ -28,7 +30,7 @@ class Home extends StatelessWidget {
                           size: 20.sp,
                           color: Colors.black),
                       const SizedBox(
-                        height: 10,
+                        height: 5,
                       ),
                       CustomText(
                         text: "Explore Today's",
@@ -42,20 +44,18 @@ class Home extends StatelessWidget {
                       padding: const EdgeInsets.only(
                         left: 5,
                       ),
-                      child: Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.0),
-                            image: const DecorationImage(
-                                image: AssetImage(
-                              'assets/images/user_image.png',
-                            ))),
-                      ))
+                      child:   IconButton(
+                        icon: IconBadge(
+                          icon: Icons.notifications_none,
+                          color: Colors.black,
+                          size: 40,
+                ),
+                onPressed: () {},
+              ),)
                 ],
               ),
               const SizedBox(
-                height: 30,
+                height: 20,
               ),
               horizontalList(context),
               const SizedBox(
@@ -137,8 +137,7 @@ class Home extends StatelessWidget {
                           width: 90.0,
                           fit: BoxFit.cover,
                                 ),
-                              ),
-                     ),                
+                              ),),                
                  const SizedBox(width: 15.0),
                     SizedBox(
                       height: 80.0,
@@ -148,19 +147,7 @@ class Home extends StatelessWidget {
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         children: <Widget>[
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            child: const Text(
-                              "Men of hope",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 14.0,
-                              ),
-                              maxLines: 2,
-                              textAlign: TextAlign.left,
-                            ),
-                          ),
-                         const SizedBox(height: 3.0),
+                      
                           Row(
                             children: <Widget>[
                               Icon(
@@ -183,6 +170,18 @@ class Home extends StatelessWidget {
                                 ),
                               ),
                             ],
+                          ),
+                           Container(
+                            alignment: Alignment.centerLeft,
+                            child: const Text(
+                              "Men of hope",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 14.0,
+                              ),
+                              maxLines: 2,
+                              textAlign: TextAlign.left,
+                            ),
                           ),
                           const SizedBox(height: 10.0),
                           Container(

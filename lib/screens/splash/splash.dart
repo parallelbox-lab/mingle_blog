@@ -2,7 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:mingle_blog/screens/auth/sign_up/sign_up.dart';
+import 'package:mingle_blog/screens/home_view.dart';
 import 'package:mingle_blog/widgets/custom_text.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({ Key? key }) : super(key: key);
 
@@ -11,15 +14,17 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+   int? isViewed;
+   String? email;  
     void _navigationPage() async {
-    // SharedPreferences prefs = await SharedPreferences.getInstance();
-    // email = prefs.getString('email');
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    email = prefs.getString('email');
   
-    // if (email == null) {
-    //     Navigator.pushReplacement(context, MaterialPageRoute(builder: (ctx) => const Onboarding()));
-    // } else {
+    if (email == null) {
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (ctx) => const SignUp()));
-    // }
+    } else {
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (ctx) => const HomeView()));
+    }
   }
   @override
   void initState() {
