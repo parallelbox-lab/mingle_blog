@@ -39,7 +39,7 @@ class _SearchBarState extends State<SearchBar> {
           ),
           suffixIcon: Visibility(child:  IconButton(onPressed:() => _searchController.clear(), icon:const Icon(Icons.clear),     
           ),
-          visible: _searchController.text.isEmpty  ? false : true,
+          visible: _searchController.text.isNotEmpty  ? false : true,
           )
         )
       ),

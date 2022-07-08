@@ -138,7 +138,7 @@ class Home extends StatelessWidget {
             child: InkWell(
               onTap: ()=> Navigator.push(context,MaterialPageRoute(builder: (ctx)=> const Details())),
               child: SizedBox(
-                height: 70.0,              
+                // height: 70.0,              
                 child: Row(
                   children: [
                      Expanded(
@@ -187,7 +187,7 @@ class Home extends StatelessWidget {
                            Container(
                             alignment: Alignment.centerLeft,
                             child: const Text(
-                              "Men of hope",
+                              "Wisecrypto is a Premium and High-Quality Cryptocurrency Market App UI Kit with 20+ high-quality screens and easy to use in Figma.",
                               style: TextStyle(
                                 fontWeight: FontWeight.w700,
                                 fontSize: 14.0,
