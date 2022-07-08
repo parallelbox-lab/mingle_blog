@@ -39,7 +39,7 @@ class _HomeViewState extends State<HomeView> {
         physics: const NeverScrollableScrollPhysics(),
       ),
       bottomNavigationBar: SizedBox(
-        height: 80,
+        height: 70,
         child: BottomNavigationBar(
             backgroundColor: Colors.white,
             currentIndex: _selectedIndex,

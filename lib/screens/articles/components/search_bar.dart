@@ -37,8 +37,8 @@ class _SearchBarState extends State<SearchBar> {
             Icons.book_online,
             color: Colors.blueGrey[300],
           ),
-          suffixIcon:_searchController.text.isEmpty ? const Text('') : IconButton(onPressed:() => _searchController.clear(), icon:const Icon(Icons.clear),     
-          ),
+          suffixIcon:_searchController.text.isNotEmpty ? IconButton(onPressed:() => _searchController.clear(), icon:const Icon(Icons.clear),     
+          ) :const Text(''),
          
       ),
     ));
