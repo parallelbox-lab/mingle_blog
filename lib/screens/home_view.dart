@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mingle_blog/screens/articles/articles.dart';
 import 'package:mingle_blog/screens/home/home.dart';
 
 class HomeView extends StatefulWidget {
@@ -11,7 +12,8 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   final List<Widget> _pages = <Widget>[
-  Home()
+  const Home(),
+  const  Articles()
   ];
   final PageController _pageController = PageController();
   int _selectedIndex = 0;
