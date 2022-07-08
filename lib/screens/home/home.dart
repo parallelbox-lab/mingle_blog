@@ -6,11 +6,26 @@ import 'package:mingle_blog/widgets/title_holder.dart';
 import 'package:mingle_blog/widgets/icon_badge.dart';
 import 'package:sizer/sizer.dart';
 
+import '../articles/components/search_bar.dart';
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    String greetings(){
+      var hour = DateTime.now().hour;
+      if(hour < 12){
+      // 
+        return "Good Morning";
+      }
+      if(hour < 17){
+      // 
+        return "Good Evening";
+      }
+      // 
+      return "Good Evening";
+    }
     return SafeArea(
       child: Scaffold(
         body: Padding(
@@ -22,23 +37,17 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CustomText(
-                          text: "Welcome, Owoeye",
-                          size: 20.sp,
-                          color: Colors.black),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      CustomText(
-                        text: "Explore Today's",
-                        size: 25.sp,
-                        color: Colors.black,
-                        weight: FontWeight.bold,
-                      )
-                    ],
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomText(
+                            text: greetings() + "\n Owoeye Precious",
+                            size: 20.sp,
+                            color: Colors.black),
+                        
+                      ],
+                    ),
                   ),
                   Padding(
                       padding: const EdgeInsets.only(
@@ -54,6 +63,10 @@ class Home extends StatelessWidget {
               ),)
                 ],
               ),
+              const SizedBox(
+                  height: 25,
+                ),
+              const  SearchBar(),
               const SizedBox(
                 height: 20,
               ),
