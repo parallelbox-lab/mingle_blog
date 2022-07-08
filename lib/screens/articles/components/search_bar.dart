@@ -19,6 +19,7 @@ class _SearchBarState extends State<SearchBar> {
         )
       ),
       child: TextField(
+        controller: _searchController,
         style:TextStyle(
           fontSize: 15.0,
           color:Colors.blueGrey[300],
@@ -35,7 +36,11 @@ class _SearchBarState extends State<SearchBar> {
           prefixIcon: Icon(
             Icons.book_online,
             color: Colors.blueGrey[300],
-          ) 
+          ),
+          suffixIcon: Visibility(child:  IconButton(onPressed:() => _searchController.clear(), icon:const Icon(Icons.clear),     
+          ),
+          visible: _searchController.text.isEmpty  ? false : true,
+          )
         )
       ),
     );

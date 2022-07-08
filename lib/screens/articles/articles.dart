@@ -13,12 +13,8 @@ class Articles extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: ListView(
             children: [
-              Row(children: [
-                IconButton(onPressed: 
-                (){}, 
-                icon:const Icon(Icons.arrow_back)),
-                const Expanded(child: SearchBar())
-              ],)
+            const SearchBar()
+             
             ],
           ),
         )
