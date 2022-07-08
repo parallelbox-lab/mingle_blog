@@ -55,11 +55,11 @@ class Details extends StatelessWidget {
                   ),
                   ), 
          Padding(
-           padding: const EdgeInsets.all(20.0),
+           padding: const EdgeInsets.all(25.0),
            child: CustomText(text: "Posttitle Here",size: 15.sp,weight:FontWeight.w700, color:Colors.black),
          ),
          Padding(
-           padding: const EdgeInsets.all(20.0),
+           padding: const EdgeInsets.all(25.0),
            child: CustomText(text: "The Model in the MVVM presents real-time data that will be used in application development. The Model only reflects the actual data and not the characteristics or any feature related to the application.It means you can’t manipulate the way the data will be represented or formatted. Each item in the dataset will be presenting its own model when the data is fetched. The main Model is kept away from the logic part for neat code but sometimes, it includes the validation logic as well.",size: 13.sp,weight:FontWeight.w500, color:Colors.black),
          ),
             ],
