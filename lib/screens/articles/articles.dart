@@ -5,8 +5,12 @@ class Articles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return SafeArea(
+      child: Scaffold(
+        body:ListView(
+          
+        )
+      ),
     );
   }
 }
