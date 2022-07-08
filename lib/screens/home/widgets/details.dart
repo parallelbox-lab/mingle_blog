@@ -42,10 +42,10 @@ class Details extends StatelessWidget {
                   height: 184.0,
                   width: double.infinity,
                   decoration:const BoxDecoration(
-                    borderRadius:  BorderRadius.only(
-                      topLeft: Radius.circular(20.0),
-                      topRight: Radius.circular(20.0),
-                    ),
+                    // borderRadius:  BorderRadius.only(
+                    //   topLeft: Radius.circular(20.0),
+                    //   topRight: Radius.circular(20.0),
+                    // ),
                     color: Colors.blue,
                     image:  DecorationImage(
                             image: AssetImage(
