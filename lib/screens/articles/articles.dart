@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'components/search_bar.dart';
+
 class Articles extends StatelessWidget {
   const Articles({ Key? key }) : super(key: key);
 
@@ -7,14 +9,18 @@ class Articles extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body:ListView(
-          children: [
-            Row(children: [
-              IconButton(onPressed: 
-              (){}, 
-              icon:const Icon(Icons.arrow_back_ios))
-            ],)
-          ],
+        body:Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: ListView(
+            children: [
+              Row(children: [
+                IconButton(onPressed: 
+                (){}, 
+                icon:const Icon(Icons.arrow_back)),
+                const Expanded(child: SearchBar())
+              ],)
+            ],
+          ),
         )
       ),
     );
