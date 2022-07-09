@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mingle_blog/ViewModel/blog_view_model.dart';
 import 'package:mingle_blog/screens/home/widgets/details.dart';
 
 import 'components/search_bar.dart';
@@ -8,6 +9,7 @@ class Articles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   BlogViewModel blog = BlogViewModel();
     return SafeArea(
       child: Scaffold(
           body: ListView(
@@ -15,20 +17,20 @@ class Articles extends StatelessWidget {
        const Padding(
         padding:EdgeInsets.all(15.0),
         child:SearchBar()),
-        postList(context)],
+        postList(context,blog)],
         ),
       ),
     );
   }
 
-  postList(BuildContext context) {
+  postList(BuildContext context, BlogViewModel blog) {
     return Padding(
         padding:const EdgeInsets.all(15.0),
       child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
           physics: const NeverScrollableScrollPhysics(),
-          itemCount: 6,
+          itemCount: blog.blogList.length,
           itemBuilder: (BuildContext context, i) {
             return Padding(
               padding: const EdgeInsets.only(bottom: 16.0),

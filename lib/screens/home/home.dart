@@ -5,9 +5,7 @@ import 'package:mingle_blog/screens/home/widgets/details.dart';
 import 'package:mingle_blog/widgets/custom_text.dart';
 import 'package:mingle_blog/widgets/icon_badge.dart';
 import 'package:mingle_blog/widgets/title_holder.dart';
-import 'package:mingle_blog/widgets/icon_badge.dart';
 import 'package:sizer/sizer.dart';
-
 import '../articles/components/search_bar.dart';
 
 class Home extends StatelessWidget {
