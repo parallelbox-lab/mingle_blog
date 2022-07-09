@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mingle_blog/ViewModel/blog_view_model.dart';
+import 'package:mingle_blog/models/blog_model.dart';
 import 'package:mingle_blog/screens/home/widgets/details.dart';
 import 'package:mingle_blog/widgets/custom_text.dart';
 import 'package:mingle_blog/widgets/icon_badge.dart';
@@ -13,26 +15,30 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String greetings(){
+    BlogViewModel blog = BlogViewModel();
+    String greetings() {
       var hour = DateTime.now().hour;
-      if(hour < 12){
-      // 
+      if (hour < 12) {
+        //
         return "Good Morning";
       }
-      if(hour < 17){
-      // 
+      if (hour < 17) {
+        //
         return "Good Evening";
       }
-      // 
+      //
       return "Good Evening";
     }
+
     return SafeArea(
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: ListView(
             children: [
-            const  SizedBox(height: 35,),
+              const SizedBox(
+                height: 35,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,28 +51,28 @@ class Home extends StatelessWidget {
                             text: greetings() + "\n Owoeye Precious",
                             size: 20.sp,
                             color: Colors.black),
-                        
                       ],
                     ),
                   ),
                   Padding(
-                      padding: const EdgeInsets.only(
-                        left: 5,
+                    padding: const EdgeInsets.only(
+                      left: 5,
+                    ),
+                    child: IconButton(
+                      icon: IconBadge(
+                        icon: Icons.notifications_none,
+                        color: Colors.black,
+                        size: 40,
                       ),
-                      child:   IconButton(
-                        icon: IconBadge(
-                          icon: Icons.notifications_none,
-                          color: Colors.black,
-                          size: 40,
-                ),
-                onPressed: () {},
-              ),)
+                      onPressed: () {},
+                    ),
+                  )
                 ],
               ),
               const SizedBox(
-                  height: 25,
-                ),
-              const  SearchBar(),
+                height: 25,
+              ),
+              const SearchBar(),
               const SizedBox(
                 height: 20,
               ),
@@ -81,7 +87,7 @@ class Home extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              latestNews(context)
+              latestNews(context, blog)
             ],
           ),
         ),
@@ -126,32 +132,34 @@ class Home extends StatelessWidget {
     );
   }
 
-  latestNews(BuildContext context) {
+  latestNews(BuildContext context, BlogViewModel blog) {
     return ListView.builder(
-      shrinkWrap: true,
-      scrollDirection: Axis.vertical,
-      physics:const NeverScrollableScrollPhysics(),
-        itemCount: 6,
+        shrinkWrap: true,
+        scrollDirection: Axis.vertical,
+        physics: const NeverScrollableScrollPhysics(),
+        itemCount: blog.blogList.length,
         itemBuilder: (BuildContext context, i) {
           return Padding(
-           padding: const EdgeInsets.only(bottom: 16.0),
+            padding: const EdgeInsets.only(bottom: 16.0),
             child: InkWell(
-              onTap: ()=> Navigator.push(context,MaterialPageRoute(builder: (ctx)=> const Details())),
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (ctx) => const Details())),
               child: SizedBox(
-                // height: 70.0,              
+                // height: 70.0,
                 child: Row(
                   children: [
-                     Expanded(
-                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(5),
-                          child: Image.asset(
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(5),
+                        child: Image.asset(
                           "assets/images/sit.jpg",
                           height: 100.0,
                           width: 90.0,
                           fit: BoxFit.cover,
-                                ),
-                              ),),                
-                 const SizedBox(width: 15.0),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 15.0),
                     SizedBox(
                       height: 80.0,
                       width: MediaQuery.of(context).size.width - 130.0,
@@ -160,7 +168,6 @@ class Home extends StatelessWidget {
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         children: <Widget>[
-                      
                           Row(
                             children: <Widget>[
                               Icon(
@@ -184,11 +191,12 @@ class Home extends StatelessWidget {
                               ),
                             ],
                           ),
-                           Container(
+                          Container(
                             alignment: Alignment.centerLeft,
-                            child: const Text(
-                              "Wisecrypto is a Premium and High-Quality Cryptocurrency Market App UI Kit with 20+ high-quality screens and easy to use in Figma.",
-                              style: TextStyle(
+                            child: Text(
+                              blog.blogList[i].postHeading!
+                              ,
+                              style:const TextStyle(
                                 fontWeight: FontWeight.w700,
                                 fontSize: 14.0,
                               ),
@@ -199,9 +207,9 @@ class Home extends StatelessWidget {
                           const SizedBox(height: 10.0),
                           Container(
                             alignment: Alignment.centerLeft,
-                            child: const Text(
-                              "By Bro Ayoade",
-                              style: TextStyle(
+                            child:  Text(
+                              blog.blogList[i].postedBy!,
+                              style:const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14.0,
                               ),
