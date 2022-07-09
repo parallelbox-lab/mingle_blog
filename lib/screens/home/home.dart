@@ -196,8 +196,7 @@ class Home extends StatelessWidget {
                           Container(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              blog.blogList[i].postHeading!
-                              ,
+                              blog.blogList[i].postHeading!,
                               style:const TextStyle(
                                 fontWeight: FontWeight.w700,
                                 fontSize: 14.0,
