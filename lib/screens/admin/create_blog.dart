@@ -7,7 +7,8 @@ class CreateBlog extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title:const Text("Create Blog Post"),),
+        title:const Text("Create Blog Post"),
+        ),
     );
   }
 }
