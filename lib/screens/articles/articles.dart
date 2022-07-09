@@ -9,15 +9,14 @@ class Articles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   BlogViewModel blog = BlogViewModel();
+    BlogViewModel blog = BlogViewModel();
     return SafeArea(
       child: Scaffold(
-          body: ListView(
-          children: [ 
-       const Padding(
-        padding:EdgeInsets.all(15.0),
-        child:SearchBar()),
-        postList(context,blog)],
+        body: ListView(
+          children: [
+            const Padding(padding: EdgeInsets.all(15.0), child: SearchBar()),
+            postList(context, blog)
+          ],
         ),
       ),
     );
@@ -25,7 +24,7 @@ class Articles extends StatelessWidget {
 
   postList(BuildContext context, BlogViewModel blog) {
     return Padding(
-        padding:const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(15.0),
       child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
@@ -35,11 +34,12 @@ class Articles extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.only(bottom: 16.0),
               child: InkWell(
-                onTap: () =>  Navigator.push(context,
-                  MaterialPageRoute(builder: (ctx) => Details(blog:blog.blogList[i]
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (ctx) => Details(blog: blog.blogList[i]),
                   ),
-                  ),
-                  ),
+                ),
                 child: SizedBox(
                   // height: 70.0,
                   child: Row(
@@ -90,9 +90,9 @@ class Articles extends StatelessWidget {
                             const SizedBox(height: 10.0),
                             Container(
                               alignment: Alignment.centerLeft,
-                              child: const Text(
-                                "Wisecrypto is a Premium and High-Quality Cryptocurrency Market App UI Kit with 20+ high-quality screens and easy to use in Figma.",
-                                style: TextStyle(
+                              child: Text(
+                                blog.blogList[i].postHeading!,
+                                style: const TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 14.0,
                                 ),
@@ -103,9 +103,9 @@ class Articles extends StatelessWidget {
                             const SizedBox(height: 10.0),
                             Container(
                               alignment: Alignment.centerLeft,
-                              child: const Text(
-                                "By Bro Ayoade",
-                                style: TextStyle(
+                              child: Text(
+                                "By ${blog.blogList[i].postedBy}",
+                                style:const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 14.0,
                                 ),
