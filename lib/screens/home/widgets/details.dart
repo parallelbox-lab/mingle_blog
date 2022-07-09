@@ -14,22 +14,14 @@ class Details extends StatelessWidget {
           preferredSize: const Size.fromHeight(70.0),
           child: Container(
             margin: const EdgeInsets.only(top: 15),
-            child: AppBar(
-              
+            child: AppBar(  
               elevation: 0,
-              leading: Container(
-                padding: const EdgeInsets.all(10),
-                decoration: const BoxDecoration(
-                  color: Colors.white70,
-                ),
-                child: IconButton(
+              leading: IconButton(
                   icon: const Icon(
                     Icons.chevron_left,
-                    color: Colors.black,
                     size: 40,
                   ),
                   onPressed: () => Navigator.pop(context),
-                ),
               ),
             ),
           ),
