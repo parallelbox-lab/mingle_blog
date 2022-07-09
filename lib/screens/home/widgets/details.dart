@@ -10,11 +10,7 @@ class Details extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         // backgroundColor: Colors.white,
-        appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(70.0),
-          child: Container(
-            margin: const EdgeInsets.only(top: 15),
-            child: AppBar(  
+        appBar: AppBar(  
               elevation: 0,
               leading: IconButton(
                   icon: const Icon(
@@ -24,8 +20,6 @@ class Details extends StatelessWidget {
                   onPressed: () => Navigator.pop(context),
               ),
             ),
-          ),
-        ),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
