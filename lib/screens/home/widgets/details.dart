@@ -9,13 +9,12 @@ class Details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        // backgroundColor: Colors.white,
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(70.0),
           child: Container(
             margin: const EdgeInsets.only(top: 15),
             child: AppBar(
-              backgroundColor: Colors.white,
               elevation: 0,
               leading: Container(
                 padding: const EdgeInsets.all(10),

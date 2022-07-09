@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         title: 'Mingle Blog',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
-       darkTheme: AppTheme.darkTheme,
+        darkTheme: AppTheme.darkTheme,
         home: const SplashScreen(),
       );
     });
