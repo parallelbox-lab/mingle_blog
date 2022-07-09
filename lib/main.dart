@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mingle_blog/screens/splash/splash.dart';
+import 'package:mingle_blog/utils/app_theme.dart';
 import 'package:sizer/sizer.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -24,8 +25,8 @@ class MyApp extends StatelessWidget {
       return MaterialApp(
         title: 'Mingle Blog',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-        ),
+        theme: AppTheme.lightTheme,
+       darkTheme: AppTheme.darkTheme,
         home: const SplashScreen(),
       );
     });
