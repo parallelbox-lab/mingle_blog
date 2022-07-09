@@ -14,7 +14,7 @@ class AppTheme{
     primaryColor: lightPrimary,
     scaffoldBackgroundColor: lightBG,
      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor:darkBG ),
+      backgroundColor:lightBG ),
       //  accentColor: lightAccent,
     appBarTheme: AppBarTheme(
       iconTheme: IconThemeData(color: darkPrimary),
@@ -34,7 +34,7 @@ class AppTheme{
     primaryColor: darkPrimary,
     scaffoldBackgroundColor: darkBG,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor:lightBG ),
+      backgroundColor:darkBG ),
     appBarTheme: AppBarTheme(
       iconTheme: IconThemeData(color: lightPrimary),
       backgroundColor: darkBG,
