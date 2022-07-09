@@ -143,7 +143,10 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 16.0),
             child: InkWell(
               onTap: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (ctx) => const Details())),
+                  MaterialPageRoute(builder: (ctx) => Details(blog:blog.blogList[i]
+                  ),
+                  ),
+                  ),
               child: SizedBox(
                 // height: 70.0,
                 child: Row(

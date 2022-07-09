@@ -5,7 +5,7 @@ import 'package:sizer/sizer.dart';
 
 class Details extends StatelessWidget {
   const Details({Key? key,this.blog}) : super(key: key);
-  final List<BlogModel>? blog;
+  final BlogModel? blog;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +42,7 @@ class Details extends StatelessWidget {
                 padding: const EdgeInsets.all(25.0),
                 child: CustomText(
                   text:
-                      "Here’s What 15 Relationship Experts Can Teach Us About Love",
+                      blog!.postHeading ?? '',
                   size: 17.sp,
                 ),
               ),
@@ -65,7 +65,7 @@ class Details extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(25.0),
                 child: CustomText(
-                    text: "Posttitle Here",
+                    text:blog!.postName ?? '',
                     size: 15.sp,
                     weight: FontWeight.w700,
                     color: Colors.black),
@@ -74,11 +74,12 @@ class Details extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: CustomText(
                     text:
-                        "The Model in the MVVM presents real-time data that will be used in application development. The Model only reflects the actual data and not the characteristics or any feature related to the application.It means you can’t manipulate the way the data will be represented or formatted. Each item in the dataset will be presenting its own model when the data is fetched. The main Model is kept away from the logic part for neat code but sometimes, it includes the validation logic as well.",
+                        blog!.postDescription,
                     size: 13.sp,
                     weight: FontWeight.w500,
                     color: Colors.black),
               ),
+             const SizedBox(height: 20,)
             ],
           ),
         ));
