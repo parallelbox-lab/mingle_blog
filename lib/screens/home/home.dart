@@ -162,7 +162,7 @@ class Home extends StatelessWidget {
                     ),
                     const SizedBox(width: 15.0),
                     SizedBox(
-                      height: 80.0,
+                      height: 90.0,
                       width: MediaQuery.of(context).size.width - 130.0,
                       child: ListView(
                         primary: false,
