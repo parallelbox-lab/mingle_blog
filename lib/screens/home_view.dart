@@ -42,7 +42,7 @@ class _HomeViewState extends State<HomeView> {
         height: 70,
         child: BottomNavigationBar(
             currentIndex: _selectedIndex,
-            selectedItemColor: Colors.black,
+            // selectedItemColor: Colors.black,
             unselectedItemColor: Colors.grey,
             showUnselectedLabels: true,
             elevation: 3,
