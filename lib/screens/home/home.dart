@@ -192,6 +192,7 @@ class Home extends StatelessWidget {
                               ),
                             ],
                           ),
+                         const SizedBox(height: 10.0),
                           Container(
                             alignment: Alignment.centerLeft,
                             child: Text(
