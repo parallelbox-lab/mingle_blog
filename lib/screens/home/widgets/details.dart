@@ -15,6 +15,7 @@ class Details extends StatelessWidget {
           child: Container(
             margin: const EdgeInsets.only(top: 15),
             child: AppBar(
+              
               elevation: 0,
               leading: Container(
                 padding: const EdgeInsets.all(10),
@@ -67,7 +68,7 @@ class Details extends StatelessWidget {
                     text:blog!.postName ?? '',
                     size: 15.sp,
                     weight: FontWeight.w700,
-                    color: Colors.black),
+                   ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -76,7 +77,7 @@ class Details extends StatelessWidget {
                         blog!.postDescription,
                     size: 13.sp,
                     weight: FontWeight.w500,
-                    color: Colors.black),
+               ),
               ),
              const SizedBox(height: 20,)
             ],
