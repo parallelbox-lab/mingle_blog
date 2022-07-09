@@ -35,8 +35,11 @@ class Articles extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.only(bottom: 16.0),
               child: InkWell(
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (ctx) => const Details())),
+                onTap: () =>  Navigator.push(context,
+                  MaterialPageRoute(builder: (ctx) => Details(blog:blog.blogList[i]
+                  ),
+                  ),
+                  ),
                 child: SizedBox(
                   // height: 70.0,
                   child: Row(
@@ -84,6 +87,7 @@ class Articles extends StatelessWidget {
                                 ),
                               ],
                             ),
+                            const SizedBox(height: 10.0),
                             Container(
                               alignment: Alignment.centerLeft,
                               child: const Text(
