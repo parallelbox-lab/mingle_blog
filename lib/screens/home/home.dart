@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
                         CustomText(
                             text: greetings() + "\n Owoeye Precious",
                             size: 20.sp,
-                            color: Colors.black),
+                            ),
                       ],
                     ),
                   ),
@@ -59,7 +59,7 @@ class Home extends StatelessWidget {
                     child: IconButton(
                       icon: IconBadge(
                         icon: Icons.notifications_none,
-                        color: Colors.black,
+                        // color: Colors.black,
                         size: 40,
                       ),
                       onPressed: () {},
