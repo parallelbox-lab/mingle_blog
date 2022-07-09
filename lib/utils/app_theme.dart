@@ -27,18 +27,14 @@ class AppTheme{
     brightness: Brightness.dark,
     backgroundColor: darkBG,
     primaryColor: darkPrimary,
-    accentColor: darkAccent,
     scaffoldBackgroundColor: darkBG,
-    cursorColor: darkAccent,
     appBarTheme: AppBarTheme(
       elevation: 0,
-      textTheme: TextTheme(
-        headline6: TextStyle(
+      titleTextStyle:  TextStyle(
           color: lightBG,
           fontSize: 18.0,
           fontWeight: FontWeight.w800,
         ),
       ),
-    ),
   );
 }
