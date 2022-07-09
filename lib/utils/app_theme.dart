@@ -15,6 +15,7 @@ class AppTheme{
     scaffoldBackgroundColor: lightBG,
       //  accentColor: lightAccent,
     appBarTheme: AppBarTheme(
+      backgroundColor: lightBG,
       elevation: 0,
       titleTextStyle: TextStyle(
           color: darkBG,
@@ -30,6 +31,7 @@ class AppTheme{
     primaryColor: darkPrimary,
     scaffoldBackgroundColor: darkBG,
     appBarTheme: AppBarTheme(
+      backgroundColor: darkBG,
       elevation: 0,
       titleTextStyle:  TextStyle(
           color: lightBG,

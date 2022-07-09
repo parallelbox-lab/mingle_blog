@@ -10,7 +10,8 @@ class Details extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         // backgroundColor: Colors.white,
-        appBar: AppBar(  
+        appBar: AppBar(
+            
               elevation: 0,
               leading: IconButton(
                   icon: const Icon(
