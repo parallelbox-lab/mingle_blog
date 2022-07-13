@@ -46,7 +46,7 @@ class Home extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         CustomText(
-                            text: greetings() + "\n Owoeye Precious",
+                            text: greetings() + "\nOwoeye Precious",
                             size: 20.sp,
                             ),
                       ],
@@ -202,6 +202,7 @@ class Home extends StatelessWidget {
                                 fontSize: 14.0,
                               ),
                               maxLines: 2,
+                              overflow:TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                             ),
                           ),
