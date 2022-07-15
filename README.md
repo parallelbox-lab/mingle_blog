@@ -7,3 +7,5 @@ Flutter and Firebase
 ## home screen
 ![Alt text](https://github.com/parallelbox-lab/mingle_blog/blob/main/flutter_02.png?raw=true "Light Mode")
 
+## all articles screen
+![Alt text](https://github.com/parallelbox-lab/mingle_blog/blob/main/flutter_02.png?raw=true "Light Mode")
